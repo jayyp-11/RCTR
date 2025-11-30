@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <title>ROTARACT CLUB OF THANE ROYALES</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="custom-container">
+            <div class="nav-bar">
+                <a href="home-page.html" class="brand-title">ROTARACT CLUB OF THANE ROYALES</a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="about-us.html">ABOUT US</a></li>
+                        <li><a href="core.html" class="active">CORE</a></li>
+                        <li><a href="events.html">EVENTS</a></li>
+                        <li><a href="achievements.html">ACHIEVEMENTS</a></li>
+                    </ul>
+                </nav>
+                <button class="navbar-toggler-custom d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a href="contact-us.html" class="contact-btn">CONTACT</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="core-hero-section">
+        <div class="core-hero-content custom-container">
+<h1 class="core-hero-title">MEET OUR SQUAD</h1>
+            <p class="core-hero-subtitle">A passionate team of changemakers who lead, create, and inspire together.We make the Rotaract Club of Thane Royales a space where meaningful purpose and friendship come together.</p>
+        </div>
+    </section>
+
+    <iframe src="carousel.html" width="100%" height="500" style="border:0;"></iframe>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mySquadSwiper = new Swiper('.squad-swiper-container', {
+                loop: true,
+                slidesPerView: 2,
+                spaceBetween: 20,
+                centeredSlides: true,
+                navigation: {
+                    nextEl: '.squad-btn-next',
+                    prevEl: '.squad-btn-prev',
+                },
+                breakpoints: {
+                    // Mobile: show 1 slide
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 10
+                    },
+                    // Desktop: show 2 slides
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 20
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Avenues Section -->
+    <section id="avenues" class="avenues-section" style="padding-left: 60px; padding-right: 60px">
+        <div class="custom-container">
+            <h2 class="core-section-title">Avenues</h2>
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-4">
+                    <div class="avenue-card">
+                        <h3>Career Development</h3>
+                        <hr>
+                        <p>Empowering members with guidance, opportunities, <br> and skills to excel in professional journeys.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="avenue-card">
+                        <h3>Club Service</h3>
+                        <hr>
+                        <p>Strengthening internal operations through coordination, <br> planning, and smooth execution of club activities.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="avenue-card">
+                        <h3>Editorial</h3>
+                        <hr>
+                        <p>Crafting clear, engaging communication that  <br>reflects the club’s values and initiatives.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="avenue-card">
+                        <h3>International Service</h3>
+                        <hr>
+                        <p>Building global connections and fostering cross-cultural understanding through impactful international collaborations.
+</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="avenue-card">
+                        <h3>Sports</h3>
+                        <hr>
+                        <p>Promoting fitness, teamwork, and competitive spirit  <br>through well-organized sporting events and activities.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="avenue-card">
+                        <h3>PR and Marketing</h3>
+                        <hr>
+                        <p>Enhancing club visibility through strategic outreach, brand communication, and stakeholder engagement efforts.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="avenue-card">
+                        <h3>Digital Communication</h3>
+                        <hr>
+                        <p>Managing online messaging with efficient, timely <br> updates that support the club’s initiatives.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="avenue-card">
+                        <h3>Community Service</h3>
+                        <hr>
+                        <p>Delivering meaningful projects that uplift communities through compassion, service, and collaborative action.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="avenue-card">
+                        <h3>Social Media Creation</h3>
+                        <hr>
+                        <p>Delivering meaningful projects that uplift communities through compassion, service, and collaborative action.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Board Section -->
+    <section id="board" class="board-section" style="padding-left: 50px; padding-right: 50px">
+        <div class="custom-container">
+            <h2 class="core-section-title">Board Of Directors</h2>
+            <div class="row gx-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="member-card">
+                        <img src="board/1.png" alt="Board Member" class="member-photo member-photo-bw">
+                        <div class="member-info">
+                            <h4>Yash Avinashe</h4>
+                            <p>Partners in Service</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="member-card">
+                        <img src="board/2.png" alt="Board Member" class="member-photo member-photo-bw">
+                        <div class="member-info">
+                            <h4>Mihir Saralkar</h4>
+                            <p>Career Development</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="member-card">
+                        <img src="board/3.png" alt="Board Member" class="member-photo member-photo-bw">
+                        <div class="member-info">
+                            <h4>Yash Mahadik</h4>
+                            <p>Club Service Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="member-card">
+                        <img src="board/4.png" alt="Board Member" class="member-photo member-photo-bw">
+                        <div class="member-info">
+                            <h4>Prathamesh Sankpal</h4>
+                            <p>Editorial Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="member-card">
+                        <img src="board/5.png" alt="Board Member" class="member-photo member-photo-bw">
+                        <div class="member-info">
+                            <h4>Dushyant Bhoir</h4>
+                            <p>International Service Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="member-card">
+                        <img src="board/6.png" alt="Board Member" class="member-photo member-photo-bw">
+                        <div class="member-info">
+                            <h4>Daksh Shah</h4>
+                            <p>Sports Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="member-card">
+                        <img src="board/7.png" alt="Board Member" class="member-photo member-photo-bw">
+                        <div class="member-info">
+                            <h4>Niraj Yadav</h4>
+                            <p>PR & Marketing Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="member-card">
+                        <img src="board/8.png" alt="Board Member" class="member-photo member-photo-bw">
+                        <div class="member-info">
+                            <h4>Harsh Patil</h4>
+                            <p>Digital Communication</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="member-card">
+                        <img src="board/9.png" alt="Board Member" class="member-photo member-photo-bw">
+                        <div class="member-info">
+                            <h4>Aashi Jakhotia</h4>
+                            <p>Community Service Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notes Section -->
+    <section id="notes" class="notes-section" style="padding-left: 50px; padding-right: 50px">
+        <div class="custom-container">
+            <article class="note-item president">
+                <h3 class="note-title">FROM THE <span style="font-size: 42px;">PRESIDENT</span></h3>
+                <div class="row g-0">
+                    <div class="col-lg-5">
+                        <div class="president-photo-card h-100">
+                            <img src="c:\Users\viya\Downloads\RCTR\RCTR\images\Manas Photo.png" alt="" style="border-radius: 40px;">
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="president-text-card h-100">
+                            <h3 class="president-name">RTR. MANAS SHETTY</h3>
+                            <p class="president-message">Welcome to the Thane Royals Club. As President, my vision for this year is simple bring people together, strengthen our community spirit, and create experiences that leave a lasting impact. The Royals stand for commitment, collaboration, and growth, and I’m proud to lead a team that truly embodies these values. With every project, initiative, and small act of service, we hope to build a club that feels inclusive, vibrant, and driven by purpose. Thank you for being a part of this journey and for helping us take the Royals legacy forward.</p>
+                            <a href="#" class="btn-custom btn-custom-primary">MEET OUR AMAZING SQUAD</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="note-item secretary">
+                <h3 class="note-title">FROM THE <span style="font-size: 42px;">SECRETARY</span></h3>
+                <div class="row g-0">
+                    <div class="col-lg-7">
+                        <div class="president-text-card h-100">
+                            <h3 class="president-name">RTR. VIVAA KOTHARI</h3>
+                            <p class="president-message">As Secretary, my focus this year is on keeping our club connected, organised, and moving forward with clarity and intention. The Thane Royals thrive on teamwork, and I’m committed to ensuring that every initiative runs smoothly, every voice is heard, and every member feels supported. From streamlining communication to strengthening collaboration, my goal is to help create a club environment that is efficient, welcoming, and truly aligned with our shared vision. Together, we’ll continue building a legacy of meaningful impact and unforgettable experiences.</p>
+                            <a href="#" class="btn-custom btn-custom-primary">MEET OUR AMAZING SQUAD</a>
+                        </div>
+                    </div>
+                                        <div class="col-lg-5">
+                        <div class="president-photo-card h-100">
+                             <img src="c:\Users\viya\Downloads\RCTR\RCTR\images\vivaa photo.jpg" alt="" style="border-radius: 40px;">
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Alumni Section -->
+    <!-- <section id="alumni" class="alumni-section">
+        <div class="custom-container">
+            <h2 class="core-section-title">ALUMNIS</h2>
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-arrow prev">
+                <img src="assets/dropdown-arrow.png" alt="Previous" style="transform: rotate(90deg);">
+            </button>
+            <div class="alumni-carousel">
+                <div class="alumni-item">
+                    <div class="alumni-photo"></div>
+                    <p>PARTNERS</p>
+                </div>
+                <div class="alumni-item">
+                    <div class="alumni-photo"></div>
+                    <p>PARTNERS</p>
+                </div>
+                <div class="alumni-item">
+                    <div class="alumni-photo"></div>
+                    <p>PARTNERS</p>
+                </div>
+            </div>
+            <button class="carousel-arrow next">
+                <img src="assets/dropdown-arrow.png" alt="Next" style="transform: rotate(270deg);">
+            </button>
+        </div> -->
+    </section> 
+
+    <!-- Footer -->
+    <footer id="contact" class="site-footer-main" style="padding-left: 1px; padding-right: 20px">
+        <div class="custom-container">
+            <div class="row justify-content-between mb-5 pb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3 class="footer-slogan">Connecting People,<br>Building Communities.<br>Shaping a Brighter Tomorrow.</h3>
+                </div>
+                <div class="col-lg-auto text-lg-end">
+                    <p class="socials-title">CONNECT WITH OUR SOCIALS</p>
+                         <div class="social-icons justify-content-lg-end">
+                            <a href="#https://www.instagram.com/rotaractclubofthaneroyales?igsh=MTMxZTNrdGVoYjFzNg=="><img src="assets/instagram.png" alt="Instagram"></a>
+                            <a href="#"><img src="assets/X.png" alt="X"></a>
+                            <a href="#"><img src="assets/mail.png" alt="Email"></a>
+                            <a href="#https://www.linkedin.com/company/rotaract-club-of-thane-royales/"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+                            <a href="#"><img src="assets/phone.png" alt="Phone"></a>
+                        </div>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between">
+                <p class="copyright mb-2 mb-md-0">@2025.All rights reserved.</p>
+                <div class="legal-links d-flex gap-3">
+                    <a href="#">Terms & Conditions</a>
+                    <span>|</span>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Shared behavior -->
+    <script src="scroll.js"></script>
+</body>
+</html>

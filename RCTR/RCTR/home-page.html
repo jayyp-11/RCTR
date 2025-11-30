@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <title>ROTARACT CLUB OF THANE ROYALES</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="custom-container">
+            <div class="nav-bar">
+                <a href="home-page.html" class="brand-title">ROTARACT CLUB OF THANE ROYALES</a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="about-us.html">ABOUT US</a></li>
+                        <li><a href="core.html">CORE</a></li>
+                        <li><a href="events.html">EVENTS</a></li>
+                        <li><a href="achievements.html">ACHIEVEMENTS</a></li>
+                    </ul>
+                </nav>
+                <button class="navbar-toggler-custom d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a href="contact-us.html" class="contact-btn">CONTACT</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="home-hero-section">
+        <div class="custom-container">
+            <div class="hero-carousel-container">
+                <div class="hero-carousel-wrapper">
+                    <div class="hero-carousel-track">
+                        <div class="hero-carousel-slide">
+                            <div class="hero-carousel-image" style="background-image: url('${ASSET_PATH}/hero-1.jpg');">
+                                <img src="c:\Users\viya\Downloads\RCTR\RCTR\images\20.png" alt="" style=" width:100%; height: 550px;">
+                            </div>
+                        </div>
+                        <div class="hero-carousel-slide">
+                            <div class="hero-carousel-image" style="background-image: url('${ASSET_PATH}/hero-2.jpg');">
+                                <img src="c:\Users\viya\Downloads\RCTR\RCTR\images\pad donation hero.png" alt="" style=" width:100%; height: 550px;">
+                            </div>
+                        </div>
+                        <div class="hero-carousel-slide">
+                            <div class="hero-carousel-image" style="background-image: url('${ASSET_PATH}/hero-3.jpg');">
+                              <img src="c:\Users\viya\Downloads\RCTR\RCTR\images\blood donation hero.png" alt="" style=" width:100%; height: 550px;">
+
+                            </div>
+                        </div>
+                        <div class="hero-carousel-slide">
+                            <div class="hero-carousel-image" style="background-image: url('${ASSET_PATH}/hero-4.jpg');">
+                              <img src="c:\Users\viya\Downloads\RCTR\RCTR\images\aabhaan hero.png" alt="" style=" width:100%; height: 550px;">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-carousel-dots">
+                    <span class="hero-carousel-dot active"></span>
+                    <span class="hero-carousel-dot"></span>
+                    <span class="hero-carousel-dot"></span>
+                    <span class="hero-carousel-dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+let heroCarouselIndex = 0;
+const heroCarouselSlides = document.querySelectorAll('.hero-carousel-slide');
+const heroCarouselDots = document.querySelectorAll('.hero-carousel-dot');
+const heroCarouselTrack = document.querySelector('.hero-carousel-track');
+
+function showHeroCarouselSlide(n) {
+  if (n >= heroCarouselSlides.length) {
+    heroCarouselIndex = 0;
+  }
+  if (n < 0) {
+    heroCarouselIndex = heroCarouselSlides.length - 1;
+  }
+
+  heroCarouselTrack.style.transform = `translateX(-${heroCarouselIndex * 100}%)`;
+
+  heroCarouselDots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === heroCarouselIndex);
+  });
+}
+
+function nextHeroCarouselSlide() {
+  heroCarouselIndex++;
+  showHeroCarouselSlide(heroCarouselIndex);
+}
+
+// Auto-advance carousel every 2 seconds
+setInterval(nextHeroCarouselSlide, 2000);
+
+// Dot click functionality
+heroCarouselDots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    heroCarouselIndex = index;
+    showHeroCarouselSlide(heroCarouselIndex);
+  });
+});
+
+// Initialize first slide
+showHeroCarouselSlide(heroCarouselIndex);
+</script>
+
+    <!-- Intro Section -->
+    <section id="intro" class="home-intro-section" style="padding-left: 50px; padding-right: 50px">
+        <div class="custom-container">
+            <div class="row g-5 align-items-start">
+                <div class="col-lg-5">
+                    <h1 class="home-intro-heading">Reach.<br>Revive.<br>Restore.</h1>
+                </div>
+                <div class="col-lg-7 pt-lg-4">
+                    <p class="home-intro-copy">The Rotaract Club of Thane Royales is a vibrant, community-focused club under Rotary International, bringing together passionate youth dedicated to creating meaningful impact through service, leadership, and innovation. Its progressive mindset, inclusive culture, and initiatives reflect its motto.</p>
+                    <a href="about-us.html" class="btn-custom btn-custom-primary">KNOW MORE ABOUT US!</a>
+                </div>
+            </div>
+            <div class="home-intro-placeholder-box">
+                <img src="c:\Users\viya\Downloads\RCTR\RCTR\images\rrr logo (3).png" alt="" style="width: 100%;border-radius: 40px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section" style="padding-left: 75px; padding-right: 75px">
+        <div class="custom-container">
+            <div class="row g-4 mb-5 text-center">
+                <div class="col-6 col-lg-3">
+                    <div class="stat-item">
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+                        </div>
+                        <h3 class="stat-title">MEMBERS</h3>
+                        <p class="stat-subtitle">Active Squad</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="stat-item">
+                        <div class="stat-number-wrapper">
+                        <span class="stat-number" data-target="10">0</span><span class="stat-suffix"></span>
+                        </div>
+                        <h3 class="stat-title">PROJECTS</h3>
+                        <p class="stat-subtitle">Impact Initiatives</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="stat-item">
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number" data-target="1200">0</span><span class="stat-suffix">+</span>
+                        </div>
+                        <h3 class="stat-title">HOURS</h3>
+                        <p class="stat-subtitle">Service Time</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="stat-item">
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number" data-target="100">0</span><span class="stat-suffix">+</span>
+                        </div>
+                        <h3 class="stat-title">LIVES</h3>
+                        <p class="stat-subtitle">People Reached</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="achievements.html" class="btn-custom btn-custom-primary">VIEW IMPACT</a>
+            </div>
+        </div>
+    </section>
+
+          <!-- Counter Script -->
+    <script>
+function startCounters() {
+  const counters = document.querySelectorAll('.stat-number');
+  const duration = 1000; // Total animation duration in milliseconds
+  const startTime = Date.now();
+  let animationFrameId;
+
+  function animate() {
+    const elapsed = Date.now() - startTime;
+    const progress = Math.min(elapsed / duration, 1); // 0 to 1
+
+    counters.forEach(counter => {
+      const target = parseInt(counter.getAttribute('data-target'));
+      const current = Math.floor(target * progress);
+      counter.textContent = current;
+    });
+
+    if (progress < 1) {
+      animationFrameId = requestAnimationFrame(animate);
+    }
+  }
+
+  animate();
+}
+
+// Start counters when page loads
+window.addEventListener('load', startCounters);
+
+// Optional: Start counters when section comes into view (Intersection Observer)
+const observerOptions = {
+  threshold: 0.5
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      startCounters();
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+const statsSection = document.querySelector('.stats-section');
+if (statsSection) {
+  observer.observe(statsSection);
+}
+</script> 
+
+    <!-- Highlights Section -->
+    <section id="highlights" class="highlights-section" style="padding-left: 50px; padding-right: 50px">
+        <div class="custom-container">
+            <!-- President Note -->
+            <div class="president-note">
+                <h2 class="section-title-white president-title"><span class="president-title-from">FROM THE</span> PRESIDENT</h2>
+                <div class="row g-0">
+                    <div class="col-lg-5">
+                        <div class="president-photo-card h-40"><img src="c:\Users\viya\Downloads\RCTR\RCTR\images\Manas Photo.png" alt="" style="border-radius: 40px;"></div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="president-text-card h-100">
+                            <h3 class="president-name">RTR. MANAS SHETTY</h3>
+                            <p class="president-message">Welcome to the Thane Royals Club. As President, my vision for this year is simple bring people together, strengthen our community spirit, and create experiences that leave a lasting impact. The Royals stand for commitment, collaboration, and growth, and I’m proud to lead a team that truly embodies these values. With every project, initiative, and small act of service, we hope to build a club that feels inclusive, vibrant, and driven by purpose. Thank you for being a part of this journey and for helping us take the Royals legacy forward.</p>
+                            <a href="core.html" class="btn-custom btn-custom-primary">MEET OUR AMAZING SQUAD</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!-- Events Showcase -->
+<section id="events" class="events-showcase">
+    <div class="container">
+
+        <!-- Heading Row -->
+        <div class="row g-4 mb-5">
+            <div class="col-lg-6">
+                <h1 class="section-title-white home-events-title">
+                    Making Memories.<br>Creating Impact.
+                </h1>
+            </div>
+            <div class="col-lg-6">
+                <p class="home-events-description" style="  text-align: justify; text-justify: inter-word;">
+                    We're here to build memories worth keeping and impact worth sharing  the kind that reflects the true spirit of the Thane Royals. With small steps, steady effort, and a united team, we create moments that matter and change that lasts.
+                </p>
+            </div>
+        </div>
+
+        <!-- EVENTS ROW -->
+        <div class="accordion-container">
+
+            <!-- CARD 1 -->
+            <div class="accordion-card" id="card1">
+                <img src="c:\Users\viya\Downloads\RCTR\RCTR\images\aabhaan home page.jpg" alt="" style="height: 500px; width: 430px;">
+                <button class="toggle-btn" onclick="toggleCard(1)">
+                    <img src="assets/dropdown-arrow.png" alt="Toggle" class="toggle-arrow">
+                </button>
+                <div class="card-content">
+                    <p class="card-text">A diwali initiative by the Rotract Club of Thane Royales, celebrating with Kshamata through letters, sweets, rangoli, smiles , spreading light and love together ,in this festive season.</p>
+                </div>
+                <h2 class="card-title">Project Aabhaan</h2>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="accordion-card" id="card2">
+                                <img src="c:\Users\viya\Downloads\RCTR\RCTR\images\project 28 homepage.jpg" alt="" style="height: 500px; width: 430px;">
+                <button class="toggle-btn" onclick="toggleCard(2)">
+                    <img src="assets/dropdown-arrow.png" alt="Toggle" class="toggle-arrow">
+                </button>
+                <div class="card-content">
+                    <p class="card-text">A sanitary pad distribution drive of over 3000 sanitary pads to underprivileged women. Taking a bold step towards menstrual hygiene, dignity and awareness.</p>
+                </div>
+                <h2 class="card-title">Project 28</h2>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="accordion-card" id="card3">
+                  <img src="c:\Users\viya\Downloads\RCTR\RCTR\images\drop of hope home page.jpg" alt="" style="height: 500px; width: 430px;">
+             
+                <button class="toggle-btn" onclick="toggleCard(3)">
+                    <img src="assets/dropdown-arrow.png" alt="Toggle" class="toggle-arrow">
+                </button>
+                <div class="card-content">
+                    <p class="card-text">A Drop of hope is a blood donation drive organized by the Rotract Club Thane royales.</p>
+                </div>
+                <h2 class="card-title">Drop of Hope</h2>
+            </div>
+
+        </div>
+
+        <!-- Button -->
+        <div class="text-center">
+            <a href="events.html" class="btn-custom btn-custom-secondary">EXPLORE EVENTS</a>
+        </div>
+
+    </div>
+</section>
+
+<script>
+function toggleCard(cardNumber) {
+  const card = document.getElementById('card' + cardNumber);
+  const btn = card.querySelector('.toggle-btn');
+  const allCards = document.querySelectorAll('.accordion-card');
+  const allBtns = document.querySelectorAll('.toggle-btn');
+
+  // Check if clicked card is already expanded
+  const isExpanded = card.classList.contains('expanded');
+
+  // Remove expanded class from all cards and buttons
+  allCards.forEach(c => c.classList.remove('expanded', 'collapsed'));
+  allBtns.forEach(b => b.classList.remove('expanded'));
+
+  // If clicked card was already expanded, just close it (don't reopen)
+  if (isExpanded) {
+    return;
+  }
+
+  // Otherwise, expand the clicked card and collapse others
+  card.classList.add('expanded');
+  btn.classList.add('expanded');
+
+  // Add collapsed class to other cards
+  allCards.forEach(c => {
+    if (c !== card) {
+      c.classList.add('collapsed');
+    }
+  });
+}
+</script>
+
+</section>
+    <section class="join-us-section" style="padding-left: 50px; padding-right: 50px">
+        <div class="custom-container">
+            <h2 class="join-us-title">JOIN US TO CREATE AN IMPACT !</h2>
+            <p class="join-us-text">Ready to make a difference? The Rotaract Club of Thane Royales is where changemakers come together to lead, serve, and inspire. From community service to creative projects and leadership opportunities, this is your chance to create real impact and grow along the way.</p>
+            <div class="d-flex flex-column flex-sm-row justify-content-start gap-3">
+                <a href="contact-us.html" class="btn-custom btn-custom-primary">JOIN AS VOLUNTEER</a>
+                <a href="contact-us.html" class="btn-custom btn-custom-primary">CONNECT WITH US</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="site-footer-main" style="padding-left: 1px; padding-right: 20px">
+        <div class="custom-container">
+            <div class="row justify-content-between mb-5 pb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3 class="footer-slogan">Connecting People, <br>Building Communities.<br>Shaping a Brighter Tomorrow.</h3>
+                </div>
+                <div class="col-lg-auto text-lg-end">
+                    <p class="socials-title">CONNECT WITH OUR SOCIALS</p>
+                    <div class="social-icons justify-content-lg-end">
+                        <a href="#https://www.instagram.com/rotaractclubofthaneroyales?igsh=MTMxZTNrdGVoYjFzNg=="><img src="assets/instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="assets/X.png" alt="X"></a>
+                        <a href="#"><img src="assets/mail.png" alt="Email"></a>
+                        <a href="#https://www.linkedin.com/company/rotaract-club-of-thane-royales/"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+                        <a href="#"><img src="assets/phone.png" alt="Phone"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between">
+                <p class="copyright mb-2 mb-md-0">@2025.All rights reserved.</p>
+                <div class="legal-links d-flex gap-3">
+                    <a href="#">Terms & Conditions</a>
+                    <span>|</span>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Shared behavior -->
+    <script src="scroll.js"></script>
+</body>
+</html>

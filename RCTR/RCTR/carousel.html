@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html, body, .stage, .ring, .img {
+  width:100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  user-select: none;
+}
+
+html, body, .stage {
+  overflow: hidden;
+}
+
+div, svg {
+  position: absolute;
+}
+
+.container {
+  perspective: 500px;
+  width: 300px;
+  height: 400px;  
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.img-text {
+  position: absolute;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+  opacity: 0;
+  pointer-events: none;
+  bottom: 20px;
+  left: 40%;
+  transform: translateX(-50%);
+}
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+
+<div class="stage">
+  <div class="container">
+    <div class="ring">
+      <div class="img"><div class="img-text">Rtr Yash Avinashe, Sergeant at ARMS</div></div>
+      <div class="img"><div class="img-text">Rtr Manas Shetty, President</div></div>
+      <div class="img"><div class="img-text">Rtr Astha Tamhankar, Finance Director</div></div>
+      <div class="img"><div class="img-text">Rtr Vivaa Kothari, Secretary</div></div>
+      <div class="img"><div class="img-text">Rtr Kanak Yadav, Vice President</div></div>
+      <div class="img"><div class="img-text">Rtr Rajas Kothare, Team Revival & Sustainance</div></div>
+      <div class="img"><div class="img-text">Rtr Yash Avinashe, Sergeant at ARMS</div></div>
+      <div class="img"><div class="img-text">Rtr Manas Shetty, President</div></div>
+      <div class="img"><div class="img-text">Rtr Astha Tamhankar, Finance Director</div></div>
+      <div class="img"><div class="img-text">Rtr Vivaa Kothari, Secretary</div></div>
+      <div class="img"><div class="img-text">Rtr Kanak Yadav, Vice President</div></div>
+      <div class="img"><div class="img-text">Rtr Rajas Kothare, Team Revival & Sustainance</div></div>
+    </div>
+  </div>
+</div>
+
+<script>
+let xPos = 0;
+let rotationTimeline;
+
+const myImages = [
+  "images/1.png",
+  "images/2.png",
+  "images/3.png",
+  "images/4.png",
+  "images/5.png",
+  "images/6.png",
+  "images/7.png",
+  "images/8.png",
+  "images/9.png",
+  "images/10.png",
+  "images/11.png",
+  "images/12.png",
+];
+
+
+gsap.timeline()
+    .set('.ring', { rotationY:180, cursor:'grab' }) 
+    .set('.img',  { 
+      rotateY: (i)=> i*-36,
+      transformOrigin: '50% 50% 500px',
+      z: -500,
+      backgroundImage: (i) => `url(images/${i+1}.png)`,
+      backgroundPosition: "center",
+      backfaceVisibility:'hidden',
+       backgroundSize: "contain",
+       backgroundRepeat: "no-repeat",
+       backfaceVisibility:'hidden'
+    })    
+    .from('.img', {
+      duration:0,
+      y:200,
+      opacity:0,
+      stagger:0.1,
+      ease:'expo'
+    })
+    .add(()=>{
+      // Start the automatic rotation
+      startRotation();
+      
+      $('.img').on('mouseenter', (e)=>{
+        let current = e.currentTarget;
+        // Pause the rotation
+        rotationTimeline.pause();
+        // Show text
+        gsap.to(current.querySelector('.img-text'), {opacity: 1, duration: 0.3});
+      })
+      
+      $('.img').on('mouseleave', (e)=>{
+        let current = e.currentTarget;
+        // Hide text
+        gsap.to(current.querySelector('.img-text'), {opacity: 0, duration: 0.3});
+        // Resume rotation from where it paused
+        rotationTimeline.resume();
+      })
+    }, '-=0.5')
+
+function startRotation() {
+  rotationTimeline = gsap.timeline();
+  rotationTimeline.to('.ring', {
+    rotationY: -360,
+    duration: 50,
+    ease: 'none',
+    repeat: -1,
+  })
+}
+
+function getBgPos(i){ 
+  return ( 100-gsap.utils.wrap(0,360,gsap.getProperty('.ring', 'rotationY')-180-i*36)/360*500 )+'px 0px';
+}
+</script>
+</body>
+</html>
